@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Images</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="https://picsum.photos/10/10?random=4" type="image/png">
+</head>
+<body>
+  <script>
+  function learnMore() {
+    const btn = document.getElementById("btn");
+    const text = document.getElementById("buttonText");
+    if (text.style.display === "none" || text.style.display === "") {
+      text.style.display = "block";
+      btn.innerText = "LEARN LESS";
+    } else {
+      text.style.display = "none";
+      btn.innerText = "LEARN MORE";
+    }
+  }
+  </script>
+  <header class="positive">
+    <div class="positive-text">
+      <h1>Explore.<br>Inspire.<br>Discover.</h1>
+      <button onclick="learnMore()" id="btn">LEARN MORE</button>
+    </div>
+    <p id="buttonText">Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+  </header>
+  <main id="gallery" class="gallery">
+    <div class="gallery-item offset-top" tabindex="1">
+      <img src="https://picsum.photos/300/300?random=1" alt="Random image 1">
+      <div class="separator"></div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+    </div>
+    <div class="gallery-item offset-mid" tabindex="2">
+      <img src="https://picsum.photos/300/300?random=2" alt="Random image 2">
+      <div class="separator"></div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+    </div>
+    <div class="gallery-item offset-low" tabindex="3">
+      <img src="https://picsum.photos/300/300?random=3" alt="Random image 3">
+      <div class="separator"></div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+    </div>
+  </main>
+  <footer>
+    <p>Images from <a href="https://picsum.photos" target="_blank" rel="noopener">Picsum</a></p>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
