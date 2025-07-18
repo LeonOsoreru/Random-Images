@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  color: black;
+}
+
+.positive {
+  background: linear-gradient(to left, #fddb0044, #fddb00e3);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 60px 60px;
+  text-align: right;
+}
+
+.positive-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#btn {
+  background: black;
+  color: white;
+  padding: 15px 25px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#buttonText {
+  margin-top: 20px;
+  display: none;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  position: relative;
+  opacity: 0;
+}
+
+.gallery-item:focus-visible {
+    outline: 3px solid black;
+}
+
+.offset-top {
+  animation: slideTop 1.2s ease-in-out forwards;
+  will-change: opacity, transform;
+}
+
+.offset-mid {
+  animation: slideMid 1.3s ease-in-out forwards;
+  will-change: opacity, transform;
+}
+
+.offset-low {
+  animation: slideLow 1.2s ease-in-out forwards;
+  will-change: opacity, transform;
+}
+
+@keyframes slideTop {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes slideMid {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLow {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(50px);
+  }
+}
+
+.separator {
+  width: 2px;
+  height: 70px;
+  background: black;
+  margin: 15px 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item p {
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background-color: whitesmoke;
+}
+
+footer a {
+  color: black;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-item {
+    margin-top: 20px !important;
+  }
+}
